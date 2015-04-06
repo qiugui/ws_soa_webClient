@@ -16,12 +16,12 @@ import cn.edu.qiugui.service.UserService;
 
 	 private IUserService port;
 	 private UserService us;
-	 private String ns="http://service.qiugui.edu.cn";
+	 private String ns="http://service.qiugui.edu.cn/";
 	 
 	 @Before
 	 public void init(){
 		 try {
-			 URL url = new URL("http://localhost:8080/ws_soa/tc?wsdl");
+			 URL url = new URL("http://localhost:9090/ws_soa/tc?wsdl");
 			 QName qName = new QName(ns, "UserService");
 			 us = new UserService(url,qName);
 			 port = us.getUserServicePort();
