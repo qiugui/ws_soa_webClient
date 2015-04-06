@@ -13,7 +13,8 @@
 <%	List<User> users = (List<User>)request.getAttribute("users"); 
 	for (User user:users){
 %>
-	<%=user.getUsername() %>----<%=user.getPassword() %>----<%=user.getNickname() %><br/>
+	<%=user.getUsername() %>----<%=user.getPassword() %>----<%=user.getNickname() %>
+	<a href="http://localhost:8080/ws_soa_webClient/user.do?method=delete&username=<%=user.getUsername() %>">删除</a><br/>
 <%		
 	}
 %>
