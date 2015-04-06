@@ -9,11 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+当前登录用户为：${loginUser.getNickname() }<br/>
 <%	List<User> users = (List<User>)request.getAttribute("users"); 
 	for (User user:users){
 %>
-	<%=user.getUsername() %>----<%=user.getPassword() %>----<%=user.getNickname() %>
+	<%=user.getUsername() %>----<%=user.getPassword() %>----<%=user.getNickname() %><br/>
 <%		
 	}
 %>
