@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "UserService", targetNamespace = "http://service.qiugui.edu.cn", wsdlLocation = "http://localhost:8080/ws_soa/tc?wsdl")
+@WebServiceClient(name = "UserService", targetNamespace = "http://service.qiugui.edu.cn/", wsdlLocation = "http://localhost:8080/ws_soa/tc?wsdl")
 public class UserService
     extends Service
 {
 
     private final static URL USERSERVICE_WSDL_LOCATION;
     private final static WebServiceException USERSERVICE_EXCEPTION;
-    private final static QName USERSERVICE_QNAME = new QName("http://service.qiugui.edu.cn", "UserService");
+    private final static QName USERSERVICE_QNAME = new QName("http://service.qiugui.edu.cn/", "UserService");
 
     static {
         URL url = null;
@@ -69,7 +69,7 @@ public class UserService
      */
     @WebEndpoint(name = "UserServicePort")
     public IUserService getUserServicePort() {
-        return super.getPort(new QName("http://service.qiugui.edu.cn", "UserServicePort"), IUserService.class);
+        return super.getPort(new QName("http://service.qiugui.edu.cn/", "UserServicePort"), IUserService.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class UserService
      */
     @WebEndpoint(name = "UserServicePort")
     public IUserService getUserServicePort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://service.qiugui.edu.cn", "UserServicePort"), IUserService.class, features);
+        return super.getPort(new QName("http://service.qiugui.edu.cn/", "UserServicePort"), IUserService.class, features);
     }
 
     private static URL __getWsdlLocation() {

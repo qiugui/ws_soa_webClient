@@ -24,15 +24,15 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Add_QNAME = new QName("http://service.qiugui.edu.cn", "add");
-    private final static QName _LoginResponse_QNAME = new QName("http://service.qiugui.edu.cn", "loginResponse");
-    private final static QName _DeleteResponse_QNAME = new QName("http://service.qiugui.edu.cn", "deleteResponse");
-    private final static QName _AddResponse_QNAME = new QName("http://service.qiugui.edu.cn", "addResponse");
-    private final static QName _UserException_QNAME = new QName("http://service.qiugui.edu.cn", "UserException");
-    private final static QName _List_QNAME = new QName("http://service.qiugui.edu.cn", "list");
-    private final static QName _Login_QNAME = new QName("http://service.qiugui.edu.cn", "login");
-    private final static QName _Delete_QNAME = new QName("http://service.qiugui.edu.cn", "delete");
-    private final static QName _ListResponse_QNAME = new QName("http://service.qiugui.edu.cn", "listResponse");
+    private final static QName _ListResponse_QNAME = new QName("http://service.qiugui.edu.cn/", "listResponse");
+    private final static QName _List_QNAME = new QName("http://service.qiugui.edu.cn/", "list");
+    private final static QName _Login_QNAME = new QName("http://service.qiugui.edu.cn/", "login");
+    private final static QName _Delete_QNAME = new QName("http://service.qiugui.edu.cn/", "delete");
+    private final static QName _UserException_QNAME = new QName("http://service.qiugui.edu.cn/", "UserException");
+    private final static QName _AddResponse_QNAME = new QName("http://service.qiugui.edu.cn/", "addResponse");
+    private final static QName _DeleteResponse_QNAME = new QName("http://service.qiugui.edu.cn/", "deleteResponse");
+    private final static QName _LoginResponse_QNAME = new QName("http://service.qiugui.edu.cn/", "loginResponse");
+    private final static QName _Add_QNAME = new QName("http://service.qiugui.edu.cn/", "add");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: cn.edu.qiugui.service
@@ -122,55 +122,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Add }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "add")
-    public JAXBElement<Add> createAdd(Add value) {
-        return new JAXBElement<Add>(_Add_QNAME, Add.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LoginResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "loginResponse")
-    public JAXBElement<LoginResponse> createLoginResponse(LoginResponse value) {
-        return new JAXBElement<LoginResponse>(_LoginResponse_QNAME, LoginResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "deleteResponse")
-    public JAXBElement<DeleteResponse> createDeleteResponse(DeleteResponse value) {
-        return new JAXBElement<DeleteResponse>(_DeleteResponse_QNAME, DeleteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "addResponse")
-    public JAXBElement<AddResponse> createAddResponse(AddResponse value) {
-        return new JAXBElement<AddResponse>(_AddResponse_QNAME, AddResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UserException }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "UserException")
-    public JAXBElement<UserException> createUserException(UserException value) {
-        return new JAXBElement<UserException>(_UserException_QNAME, UserException.class, null, value);
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "listResponse")
+    public JAXBElement<ListResponse> createListResponse(ListResponse value) {
+        return new JAXBElement<ListResponse>(_ListResponse_QNAME, ListResponse.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link List }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "list")
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "list")
     public JAXBElement<List> createList(List value) {
         return new JAXBElement<List>(_List_QNAME, List.class, null, value);
     }
@@ -179,7 +143,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link Login }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "login")
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "login")
     public JAXBElement<Login> createLogin(Login value) {
         return new JAXBElement<Login>(_Login_QNAME, Login.class, null, value);
     }
@@ -188,18 +152,54 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link Delete }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "delete")
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "delete")
     public JAXBElement<Delete> createDelete(Delete value) {
         return new JAXBElement<Delete>(_Delete_QNAME, Delete.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UserException }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn", name = "listResponse")
-    public JAXBElement<ListResponse> createListResponse(ListResponse value) {
-        return new JAXBElement<ListResponse>(_ListResponse_QNAME, ListResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "UserException")
+    public JAXBElement<UserException> createUserException(UserException value) {
+        return new JAXBElement<UserException>(_UserException_QNAME, UserException.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "addResponse")
+    public JAXBElement<AddResponse> createAddResponse(AddResponse value) {
+        return new JAXBElement<AddResponse>(_AddResponse_QNAME, AddResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "deleteResponse")
+    public JAXBElement<DeleteResponse> createDeleteResponse(DeleteResponse value) {
+        return new JAXBElement<DeleteResponse>(_DeleteResponse_QNAME, DeleteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "loginResponse")
+    public JAXBElement<LoginResponse> createLoginResponse(LoginResponse value) {
+        return new JAXBElement<LoginResponse>(_LoginResponse_QNAME, LoginResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Add }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "add")
+    public JAXBElement<Add> createAdd(Add value) {
+        return new JAXBElement<Add>(_Add_QNAME, Add.class, null, value);
     }
 
 }

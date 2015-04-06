@@ -10,13 +10,12 @@ import javax.xml.ws.WebFault;
  * Generated source version: 2.2
  * 
  */
-@WebFault(name = "UserException", targetNamespace = "http://service.qiugui.edu.cn")
+@WebFault(name = "UserException", targetNamespace = "http://service.qiugui.edu.cn/")
 public class UserException_Exception
     extends Exception
 {
 
-	private static final long serialVersionUID = 1L;
-	/**
+    /**
      * Java type that goes as soapenv:Fault detail element.
      * 
      */

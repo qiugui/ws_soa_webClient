@@ -17,7 +17,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "IUserService", targetNamespace = "http://service.qiugui.edu.cn")
+@WebService(name = "IUserService", targetNamespace = "http://service.qiugui.edu.cn/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -30,10 +30,10 @@ public interface IUserService {
      * @throws UserException_Exception
      */
     @WebMethod
-    @RequestWrapper(localName = "add", targetNamespace = "http://service.qiugui.edu.cn", className = "cn.edu.qiugui.service.Add")
-    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://service.qiugui.edu.cn", className = "cn.edu.qiugui.service.AddResponse")
+    @RequestWrapper(localName = "add", targetNamespace = "http://service.qiugui.edu.cn/", className = "cn.edu.qiugui.service.Add")
+    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://service.qiugui.edu.cn/", className = "cn.edu.qiugui.service.AddResponse")
     public void add(
-        @WebParam(name = "user", targetNamespace = "http://service.qiugui.edu.cn")
+        @WebParam(name = "user", targetNamespace = "")
         User user)
         throws UserException_Exception
     ;
@@ -43,10 +43,10 @@ public interface IUserService {
      * @param username
      */
     @WebMethod
-    @RequestWrapper(localName = "delete", targetNamespace = "http://service.qiugui.edu.cn", className = "cn.edu.qiugui.service.Delete")
-    @ResponseWrapper(localName = "deleteResponse", targetNamespace = "http://service.qiugui.edu.cn", className = "cn.edu.qiugui.service.DeleteResponse")
+    @RequestWrapper(localName = "delete", targetNamespace = "http://service.qiugui.edu.cn/", className = "cn.edu.qiugui.service.Delete")
+    @ResponseWrapper(localName = "deleteResponse", targetNamespace = "http://service.qiugui.edu.cn/", className = "cn.edu.qiugui.service.DeleteResponse")
     public void delete(
-        @WebParam(name = "username", targetNamespace = "http://service.qiugui.edu.cn")
+        @WebParam(name = "username", targetNamespace = "")
         String username);
 
     /**
@@ -55,9 +55,9 @@ public interface IUserService {
      *     returns java.util.List<cn.edu.qiugui.service.User>
      */
     @WebMethod
-    @WebResult(name = "user", targetNamespace = "http://service.qiugui.edu.cn")
-    @RequestWrapper(localName = "list", targetNamespace = "http://service.qiugui.edu.cn", className = "cn.edu.qiugui.service.List")
-    @ResponseWrapper(localName = "listResponse", targetNamespace = "http://service.qiugui.edu.cn", className = "cn.edu.qiugui.service.ListResponse")
+    @WebResult(name = "user", targetNamespace = "")
+    @RequestWrapper(localName = "list", targetNamespace = "http://service.qiugui.edu.cn/", className = "cn.edu.qiugui.service.List")
+    @ResponseWrapper(localName = "listResponse", targetNamespace = "http://service.qiugui.edu.cn/", className = "cn.edu.qiugui.service.ListResponse")
     public List<User> list();
 
     /**
@@ -69,13 +69,13 @@ public interface IUserService {
      * @throws UserException_Exception
      */
     @WebMethod
-    @WebResult(name = "user", targetNamespace = "http://service.qiugui.edu.cn")
-    @RequestWrapper(localName = "login", targetNamespace = "http://service.qiugui.edu.cn", className = "cn.edu.qiugui.service.Login")
-    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://service.qiugui.edu.cn", className = "cn.edu.qiugui.service.LoginResponse")
+    @WebResult(name = "user", targetNamespace = "")
+    @RequestWrapper(localName = "login", targetNamespace = "http://service.qiugui.edu.cn/", className = "cn.edu.qiugui.service.Login")
+    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://service.qiugui.edu.cn/", className = "cn.edu.qiugui.service.LoginResponse")
     public User login(
-        @WebParam(name = "username", targetNamespace = "http://service.qiugui.edu.cn")
+        @WebParam(name = "username", targetNamespace = "")
         String username,
-        @WebParam(name = "password", targetNamespace = "http://service.qiugui.edu.cn")
+        @WebParam(name = "password", targetNamespace = "")
         String password)
         throws UserException_Exception
     ;
