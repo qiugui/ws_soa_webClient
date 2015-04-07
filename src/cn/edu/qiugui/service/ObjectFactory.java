@@ -28,6 +28,7 @@ public class ObjectFactory {
     private final static QName _List_QNAME = new QName("http://service.qiugui.edu.cn/", "list");
     private final static QName _Login_QNAME = new QName("http://service.qiugui.edu.cn/", "login");
     private final static QName _Delete_QNAME = new QName("http://service.qiugui.edu.cn/", "delete");
+    private final static QName _LicenseInfo_QNAME = new QName("http://service.qiugui.edu.cn/", "licenseInfo");
     private final static QName _UserException_QNAME = new QName("http://service.qiugui.edu.cn/", "UserException");
     private final static QName _AddResponse_QNAME = new QName("http://service.qiugui.edu.cn/", "addResponse");
     private final static QName _DeleteResponse_QNAME = new QName("http://service.qiugui.edu.cn/", "deleteResponse");
@@ -71,6 +72,14 @@ public class ObjectFactory {
      */
     public AddResponse createAddResponse() {
         return new AddResponse();
+    }
+
+    /**
+     * Create an instance of {@link LicenseInfo }
+     * 
+     */
+    public LicenseInfo createLicenseInfo() {
+        return new LicenseInfo();
     }
 
     /**
@@ -155,6 +164,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "delete")
     public JAXBElement<Delete> createDelete(Delete value) {
         return new JAXBElement<Delete>(_Delete_QNAME, Delete.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LicenseInfo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.qiugui.edu.cn/", name = "licenseInfo")
+    public JAXBElement<LicenseInfo> createLicenseInfo(LicenseInfo value) {
+        return new JAXBElement<LicenseInfo>(_LicenseInfo_QNAME, LicenseInfo.class, null, value);
     }
 
     /**
