@@ -32,7 +32,7 @@ import cn.edu.qiugui.service.UserService;
 	 @Before
 	 public void init(){
 		 try {
-			 URL url = new URL("http://localhost:9090/ws_soa/tc?wsdl");
+			 URL url = new URL("http://localhost:8080/ws_soa/tc?wsdl");
 			 QName qName = new QName(ns, "UserService");
 			 us = new UserService(url,qName);
 			 port = us.getUserServicePort();
@@ -57,7 +57,7 @@ import cn.edu.qiugui.service.UserService;
 			//1.将一个对象转换为xml 通过JAXB
 			JAXBContext ctx = JAXBContext.newInstance(LicenseInfo.class);
 			User ru = new User();
-			ru.setUsername("admin");
+			ru.setUsername("aadmin");
 			ru.setNickname("超级管理员" );
 			ru.setPassword("123");
 			 
@@ -96,7 +96,7 @@ import cn.edu.qiugui.service.UserService;
 			 e.printStackTrace();
 			 
 		} catch (UserException_Exception e) {
-			 e.printStackTrace();
+			 System.out.println(e.getMessage());
 			 
 		}
 	 }
@@ -104,7 +104,12 @@ import cn.edu.qiugui.service.UserService;
 	 @org.junit.Test
 	 public void testDelete(){
 		 String username = "zs";
-		 port.delete(username);
+		 try {
+			port.delete(username);
+		} catch (UserException_Exception e) {
+			 System.out.println(e.getMessage());
+			 
+		}
 	 }
 	 
 	 @org.junit.Test

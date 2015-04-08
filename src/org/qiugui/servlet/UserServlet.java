@@ -67,15 +67,22 @@ public class UserServlet extends HttpServlet {
 	private void delete(HttpServletRequest request, HttpServletResponse response) {
 
 		try {
+			WebUtil.addLicenseHeader(port, request);
 			String username = request.getParameter("username");
 			port.delete(username);
 			response.sendRedirect("user.do");
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (UserException_Exception e) {
+			 System.out.println(e.getMessage());
+			 
 		}
 	}
 
 	private void add(HttpServletRequest request, HttpServletResponse response) {
+		
+		WebUtil.addLicenseHeader(port, request);
+		
 		String username = request.getParameter("username");
 		String nickname = request.getParameter("nickname");
 		String password = request.getParameter("password");
